@@ -62,7 +62,7 @@ public class EmployeeDAO{
 
         Connection c = databaseConnector.getConnection();
 
-        String updateStatement = "UPDATE Employee SET Name = ? Salary = ? BankAccount = ? NationalInsurance = ? WHERE OrderID = ? ;";
+        String updateStatement = "UPDATE Employee SET Name = ?, Salary = ?, BankAccount = ?, NationalInsurance = ? WHERE EmployeeID = ? ;";
         PreparedStatement st = c.prepareStatement(updateStatement);
 
         st.setString(1, employee.getName());
@@ -79,7 +79,7 @@ public class EmployeeDAO{
 
         Connection c = databaseConnector.getConnection();
 
-        String deleteStatement = "DELETE FROM Employee WHERE OrderID = ?";
+        String deleteStatement = "DELETE FROM Employee WHERE EmployeeID = ?";
 
         PreparedStatement st = c.prepareStatement(deleteStatement);
 
