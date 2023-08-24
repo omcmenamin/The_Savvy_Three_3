@@ -7,12 +7,14 @@ public class Employee {
     private String bankAccount;
     private String nationalInsurance;
 
+
+
     public Employee(int employeeID, String name, double salary, String bankAccount, String nationalInsurance) {
-        this.employeeID = employeeID;
-        this.name = name;
-        this.salary = salary;
-        this.bankAccount = bankAccount;
-        this.nationalInsurance = nationalInsurance;
+        setEmployeeID(employeeID);
+        setName(name);
+        setSalary(salary);
+        setBankAccount(bankAccount);
+        setNationalInsurance(nationalInsurance);
     }
 
     public int getEmployeeID() {
